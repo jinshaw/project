@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <h1>LOGIN</h1>
+    <form action="/index/" method="post">
+        <input type="text" name="username"/>
+        <input type="password" name="password" />
+        <input type="submit" value="submit"/>
+    {% csrf_token %}
+        <br>{{data.word}}
+    </form>
+    {% for i in user_list %}
+        <tr>
+            <td>{{ i.user }}</td>
+            <td>{{ i.pwd }}</td>
+        </tr>
+    {% endfor %}
+</body>
+</html>
